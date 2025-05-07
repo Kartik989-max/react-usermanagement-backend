@@ -6,7 +6,7 @@ import router from './src/routes/user.js'
 const app=express();
 dotenv.config();
 
-app.use(cors());
+app.use(cors({origin: process.env.CLIENT_URL}));
 app.use(express.json());    
 connectDB();
 
